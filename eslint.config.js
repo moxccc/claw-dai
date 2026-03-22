@@ -1,1 +1,23 @@
-import js from @eslint/js\\nimport globals from globals\\nimport reactHooks from eslint-plugin-react-hooks\\nimport reactRefresh from eslint-plugin-react-refresh\\nimport tseslint from typescript-eslint\\nimport { defineConfig, globalIgnores } from eslint/config\\n\\nexport default defineConfig([\\n  globalIgnores([dist]),\\n  {\\n    files: [**/*.{ts,tsx}],\\n    extends: [\\n      js.configs.recommended,\\n      tseslint.configs.recommended,\\n      reactHooks.configs.flat.recommended,\\n      reactRefresh.configs.vite,\\n    ],\\n    languageOptions: {\\n      ecmaVersion: 2020,\\n      globals: globals.browser,\\n    },\\n  },\\n])\\n
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tseslint from 'typescript-eslint'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      js.configs.recommended,
+      tseslint.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+  },
+])
