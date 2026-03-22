@@ -19,14 +19,6 @@ export default function DoodleCanvas() {
   const [paths, setPaths] = useState<DrawPath[]>([])
   const [currentPath, setCurrentPath] = useState<Point[]>([])
   const [isEraser, setIsEraser] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile('ontouchstart' in window)
-    checkMobile()
-    window.addEventListener('resize', checkMobile)
-    return () => window.removeEventListener('resize', checkMobile)
-  }, [])
 
   const getContext = useCallback(() => {
     const canvas = canvasRef.current
