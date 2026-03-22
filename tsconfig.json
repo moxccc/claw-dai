@@ -1,1 +1,7 @@
-{\\n  \"files\": [],\\n  \"references\": [\\n    { \"path\": \"./tsconfig.app.json\" },\\n    { \"path\": \"./tsconfig.node.json\" }\\n  ]\\n}\\n
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
